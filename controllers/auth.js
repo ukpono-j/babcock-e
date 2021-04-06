@@ -1,14 +1,14 @@
 const jwt = require("jsonwebtoken");
 const passport = require("../handlers/auth");
-// const { user: User } = require("../models/index");
+const { user: User } = require("../models/index");
 
 module.exports = {
   _name: "auth",
   login: [
     passport.authenticate("local"),
-    handleAsync(async (req, res, next) => {
-      return res.json(req.user);
-    }),
+    (req, res, next) => {
+      return res.json(req.user.toPublic());
+    },
   ],
 
   logout: (req, res) => {
@@ -18,4 +18,13 @@ module.exports = {
       return res.redirect("/");
     });
   },
-}
+
+  register: async (req, res) => {
+    try {
+      const user = await User.create(req.body);
+      res.created().json(user.toPublic());
+    } catch (err) {
+      res.internalServerError().send(err);
+    }
+  },
+};

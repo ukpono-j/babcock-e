@@ -1,6 +1,6 @@
 const passport = require("passport");
 const Local = require("passport-local").Strategy;
-// const { user: Users } = require("../models");
+const { user: User } = require("../models");
 
 passport.use(
   new Local(
@@ -9,26 +9,28 @@ passport.use(
     },
     async function (email, password, done) {
       try {
-        let user = await Users.findOne({ email });
+        const msg = { message: "Incorrect email or password" };
+        let user = await User.findOne({ where: { email } });
+
         if (!user) {
-          return done(null, false, { message: "Incorrect email or password" });
+          return done(null, false, msg);
         }
         if (!(await user.verifyPassword(password))) {
-          return done(null, false, { message: "Incorrect email or password" });
+          return done(null, false, msg);
         }
 
         return done(null, user);
       } catch (err) {
-        throw err;
+        done(err);
       }
     }
   )
 );
 
-passport.serializeUser((user, done) => done(null, user._id));
+passport.serializeUser((user, done) => done(null, user.id));
 passport.deserializeUser(async (id, done) => {
   try {
-    let user = await Users.findById(id);
+    let user = await User.findByPk(id);
     if (!user) throw Error("UNAUTHORIZED");
     done(null, user);
   } catch (err) {
