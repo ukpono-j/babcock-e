@@ -1,0 +1,50 @@
+    /* ####################################################
+    :: Template Name: Essence - Fashion Ecommerce Template
+    :: Author: Colorlib
+    :: Author URL: https://colorlib.com
+    :: Description: Essence is smart & elegant fashion e-commerce Template. It's suitable for all e-commerce business platform.
+    :: Version: 1.0.0
+    :: Created: April 27, 2018
+    :: Last Updated: May 2, 2018
+    #################################################### */
+
+    /* ---------------------------------------
+    ##### - PLACE YOUR CUSTOM CSS HERE - #####
+    --------------------------------------- */
+    .newsletter-area .newsletter-form form input[type="submit"]{
+        background-color: rgb(185, 141, 59);
+    }
+    #scrollUp {
+        background-color: rgb(185, 141, 59);
+    }
+    .newsletter-area .newsletter-text h2 span {
+        color: rgb(185, 141, 59);
+    }
+    .product-topbar .total-products .view a:first-child{
+        background-color: rgb(185, 141, 59);
+    }
+    /* ---------------------------------------
+    ################## - NAVIGATION BAR - ##########
+    ------------------------------------------*/
+    .main-content-wrapper .header-area .amado-nav li a{
+        color: rgb(0,66,136) !important;
+    }
+    .mobile-nav .amado-navbar-toggler span{
+        background-color: rgb(185, 141, 59) !important;
+    }
+    .main-content-wrapper .header-area .amado-nav li a::after {
+        background-color: rgb(185, 141, 59);
+    }
+    .main-content-wrapper .header-area .nav-close{
+        background-color: rgb(185, 141, 59);
+    }
+    .main-content-wrapper .header-area .cart-fav-search a {
+        color: rgb(0,66,136);
+    }
+    /* ---------------------------------------
+    ################## - HOME PAGES - ##########
+    ------------------------------------------*/
+    .line{
+        /* background-color: rgb(185,141,59)red !important; */
+        background-color: rgb(0,66,136) !important;
+    }
