@@ -55,7 +55,7 @@ module.exports = function (sequelize, DataType) {
   );
 
   User.prototype.toPublic = function () {
-    return _.omit(this.toJOSN(), "salt", "hash", "password");
+    return _.omit(this.toJSON(), "salt", "hash", "password");
   };
 
   User.prototype.verifyPassword = async function (password) {
