@@ -5,14 +5,16 @@ module.exports = function (sequelize, DataType) {
       name: {
         type: DataType.STRING,
         allowNull: false,
-        validate: {
-          isAlpha: true,
-        },
         unique: true,
       },
       author: {
         type: DataType.STRING,
         allowNull: false,
+      },
+      filename: {
+        type: DataType.STRING,
+        allowNull: false,
+        unique: true,
       },
     },
     {
@@ -20,6 +22,10 @@ module.exports = function (sequelize, DataType) {
         beforeValidate: function (input) {
           if (input.name) {
             input.name = input.name.toLowerCase().trim();
+          }
+
+          if (input.author) {
+            input.author = input.author.toLowerCase().trim();
           }
         },
       },
