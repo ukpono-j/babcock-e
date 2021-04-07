@@ -11,6 +11,18 @@
     /* ---------------------------------------
     ##### - PLACE YOUR CUSTOM CSS HERE - #####
     --------------------------------------- */
+    @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+
+
+
+
+
+
+
+
     .newsletter-area .newsletter-form form input[type="submit"]{
         background-color: rgb(185, 141, 59);
     }
@@ -41,10 +53,306 @@
     .main-content-wrapper .header-area .cart-fav-search a {
         color: rgb(0,66,136);
     }
+    .pagination .page-item.active .page-link{
+        background-color: rgb(185, 141, 59) !important;
+    }
+    .widget .catagories-menu li.active a{
+        color: rgb(185, 141, 59) !important;
+    }
+    .widget .catagories-menu li.active a:hover{
+        color: rgb(185, 141, 59) !important;
+    }
+    .widget .catagories-menu li.active {
+        color: rgb(185, 141, 59) !important;
+    }
     /* ---------------------------------------
     ################## - HOME PAGES - ##########
     ------------------------------------------*/
     .line{
         /* background-color: rgb(185,141,59)red !important; */
         background-color: rgb(0,66,136) !important;
+        display: none !important;
     }
+    .upload-field{
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        align-items: center;
+    }
+    .upload-field h1{
+        padding-left: 20px;
+    }
+    .upload-field a{
+        margin-right: 30px;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 14px;
+        display: flex;
+        width: 120px;
+        height: 40px;
+        border-radius: 10px;
+        text-transform: uppercase;
+        color: white;
+        background-color: rgb(185, 141, 59);
+    }
+    /* -----------------------------------------------------------
+    ########################## SIGN UP FORMS ####################
+     ------------------------------------------------------------*/
+     .sign-section{
+        background: #DDD !important;
+     }
+    .sign-up{
+        height: 100vh;
+        background-color: red;
+        padding: 30px;
+    }
+    .sign-row
+    {
+        display: flex;
+    }
+    .right .right-link{
+        margin-top: 30px;
+    }
+    .sign-form{
+        height: 60vh;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+    }
+    .links{
+        margin-top: 7px;
+        background: #55ACEE !important;
+    }
+    .links-google{
+        background: #DD4B39 !important;
+    }
+    .sign-title{
+        font-size: 20px;
+    }
+    .left{
+        padding: 30px;
+        padding-top: 40px;
+    }
+    .left input{
+        width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding-left: 4px;
+        border-bottom: 1px solid #AAA;
+    }
+    .right-link:hover{
+      color: white;
+      
+    }
+    .right h3{
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+    .right-link{
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        height: 39px;
+        font-size: 14px;
+        background: #32508E;
+        color: white;
+        justify-content: center;
+    }
+    .sign-img{
+        height: 60vh;
+        width: 100%;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+        background-color: rgb(0,66,136);
+        /* background-image: url(../public/img/bg-img/002.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; */
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .submit{
+        width: 100px !important;
+        height: 36px;
+        outline-color: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: white;
+        border: none;
+        background: #32508E;
+    }
+   
+    /* ------------------------------------------------------
+    @@@@@@@@          LOGIN PAGE
+    --------------------------------------------------------- */
+    .login{
+        height: 100vh;
+        background-color: red;
+        padding: 30px;
+    }
+    .login-row
+    {
+        display: flex;
+    }
+    .right .right-link{
+        margin-top: 30px;
+    }
+    .login-form{
+        height: 60vh;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+    }
+    .links{
+        margin-top: 7px;
+        background: #55ACEE !important;
+    }
+    .links-google{
+        background: #DD4B39 !important;
+    }
+    .login-title{
+        font-size: 20px;
+    }
+    .left{
+        padding: 30px;
+        padding-top: 40px;
+    }
+    .left input{
+        width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding-left: 4px;
+        border-bottom: 1px solid #AAA;
+        outline-color: transparent;
+    }
+    .right-link:hover{
+      color: white;
+      
+    }
+    .right h3{
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+    .right-link{
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        height: 39px;
+        font-size: 14px;
+        background: #32508E;
+        color: white;
+        justify-content: center;
+    }
+    .login-img{
+        height: 60vh;
+        width: 100%;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+        background-color: rgb(0,66,136);
+        /* background-image: url(../public/img/bg-img/002.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; */
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .submit{
+        width: 100px !important;
+        height: 36px;
+        outline-color: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: white;
+        border: none;
+        background: #32508E;
+    }
+
+
+
+    /* ----------------------------------------------------------------
+    ##################### MEDIA QUERIES OF THE SIGNUUP FORM ###########
+    -------------------------------------------------------------------*/
+     @media only screen and (max-width: 576px){
+         .login-row{
+             display: block;
+         }
+     }
+     @media only screen and (min-width: 1000px){
+         .sign-row{
+             margin-left: 130px;
+             width: 100%;
+         }
+         .login-row{
+            margin-left: 130px;
+            width: 100%;
+        }
+     }
+    /* -----------------------------------------------------------
+    ########################## END SIGN UP FORMS ####################
+     ------------------------------------------------------------*/
+
+
+      /* -----------------------------------------------------------
+    ########################## DEPARTMENTS ####################
+     ------------------------------------------------------------*/
+    .download-btn i{
+        font-size: 20px;
+    }
+    .book-info{
+        display: flex;
+        background-color: rgb(185, 141, 59);
+        height: 40px;
+        width: 100px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .book-info h6{
+        color: white !important;
+    }
+    .download{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* .book-info h6{
+        color: white;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+    .download-container{
+        margin-top: 260px;
+        background-color: none;
+        padding-left: 250px;
+    }
+    .download-container a i{
+        font-size: 30px;
+    }
+ */
+
+
+
+
+
+
+
+      /* -----------------------------------------------------------
+    ########################## END OF DEPARTMENT ####################
+     ------------------------------------------------------------*/
+
+     
+     
+     
