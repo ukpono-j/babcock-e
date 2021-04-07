@@ -1,4 +1,5 @@
 require("dotenv").config();
+const { promises: fsPromise } = require("fs");
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
@@ -46,7 +47,22 @@ app.use(
 app.use("/", router);
 
 // console.log(global);
-db.sequelize.sync().then(() => {
+db.sequelize.sync().then(async () => {
+  let filesPath = path.resolve(__dirname, "uploads");
+
+  async function findOrCreateStoreDir(dirPath) {
+    try {
+      const descp = await fsPromise.open(dirPath, "r");
+      await descp.close();
+    } catch (err) {
+      if (err.code === "ENOENT") {
+        return await fsPromise.mkdir(dirPath);
+      }
+    }
+  }
+
+  await findOrCreateStoreDir(filesPath);
+
   app.listen(PORT, function () {
     console.log(`Server started on port ${PORT}`);
   });
