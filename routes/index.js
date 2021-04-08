@@ -1,11 +1,11 @@
 const express = require("express");
 const usersRoute = require("./users");
-const booksRoute = require("./books");
+const departmentRoute = require("./departments");
 const isLoggedIn = require("../middlewares/is-logged-in");
 
 const router = express.Router();
 
 router.use("/auth", usersRoute);
-router.use("/books", isLoggedIn, booksRoute);
+router.use("/department", isLoggedIn, departmentRoute);
 
 module.exports = router;
