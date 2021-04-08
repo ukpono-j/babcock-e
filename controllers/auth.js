@@ -9,7 +9,7 @@ module.exports = {
       failureRedirect: "/login.html",
     }),
     (req, res, next) => {
-      return res.redirect("/department.html");
+      return res.redirect("/department");
     },
   ],
 
@@ -34,7 +34,7 @@ module.exports = {
       failureRedirect: "/login.html",
     }),
     (req, res, next) => {
-      return res.redirect("/department.html");
+      return res.redirect("/department");
     },
   ],
 };
