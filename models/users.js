@@ -7,10 +7,7 @@ module.exports = function (sequelize, DataType) {
     {
       name: {
         type: DataType.STRING,
-        allowNull: false,
-        validate: {
-          isAlpha: true,
-        },
+        allowNull: false
       },
       email: {
         type: DataType.STRING,
