@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { promises: fsPromise } = require("fs");
+const {promises: fsPromise} = require("fs");
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
@@ -28,29 +28,34 @@ app.set("view engine", "ejs");
 
 // middlewares
 app.use(logger("dev"));
-app.use(goodStatus({ send: false }));
+app.use(goodStatus({
+  send: false
+}));
 app.use(cookieParser());
-app.use(expressSession(sessOption)); //will be set with secret form env
+app.use(expressSession(sessOption));
+//will be set with secret form env
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(
-  fileUpload({
-    limits: { fileSize: 900 * 1024 * 1024 },
-    useTempFiles: true,
-    tempFileDir: path.resolve(__dirname, "uploads", "tmp"),
-  })
-);
+app.use(express.urlencoded({
+  extended: false
+}));
+app.use(fileUpload({
+  limits: {
+    fileSize: 900 * 1024 * 1024
+  },
+  useTempFiles: true,
+  tempFileDir: path.resolve(__dirname, "uploads", "tmp"),
+}));
 
 app.use("/", router);
 
 // console.log(global);
-db.sequelize.sync().then(async () => {
+db.sequelize.sync().then(async()=>{
   let filesPath = path.resolve(__dirname, "uploads");
 
-  async function findOrCreateStoreDir(dirPath) {
+  async function findOrCreateUploadDir(dirPath) {
     try {
       const descp = await fsPromise.open(dirPath, "r");
       await descp.close();
@@ -61,9 +66,17 @@ db.sequelize.sync().then(async () => {
     }
   }
 
-  await findOrCreateStoreDir(filesPath);
+  await findOrCreateUploadDir(filesPath);
 
-  app.listen(PORT, function () {
+  //   create departments
+  const depts = ["COMPUTING AND ENGINEERING", "BENJAMIN CARSON SCHOOL OF MEDICINE", "EDUCATION AND HUMANITIES", "LAW AND SECURITY STUDIES", "MANAGEMENT SCIENCES", "SCHOOL OF NURSING SCIENCES", "PUBLIC AND ALLIED HEALTH", "SCIENCE AND TECHNOLOGY", "VERONICA ADELEKE SCHOOL OF SOCIAL SCIENCES"]
+  await db.Department.bulkCreate(depts.map(e=>({
+    name: e.toLowerCase()
+  }))).catch(err=>{}
+  );
+
+  app.listen(PORT, function() {
     console.log(`Server started on port ${PORT}`);
   });
-});
+}
+);
