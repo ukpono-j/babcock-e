@@ -48,14 +48,13 @@
       .download-container-icon{
           padding-top: 260px;
           padding-left: 240px;
+          /* position: absolute;
+          bottom: 0px; */
+
       }
       .download-container-icon a i{
           font-size: 20px;
       }
-      /* .download-container-icon1{
-        padding-top: 400px;
-        padding-left: 230px;
-      } */
  /* ---------------------------------------------------------
     ##################### END GENERAL STYLES ###################
     ----------------------------------------------------------- */
@@ -130,6 +129,12 @@
         color: white;
         background-color: rgb(185, 141, 59);
     }
+    @media only screen and (max-width: 569px){
+     .upload-field h1{
+         font-size: 15px;
+         padding-left: 20px;
+     }
+    }
     /* -----------------------------------------------------------
     ########################## SIGN UP FORMS ####################
      ------------------------------------------------------------*/
@@ -149,7 +154,7 @@
         margin-top: 30px;
     }
     .sign-form{
-        height: 60vh;
+        height: auto;
         width: 100%;
         background-color: white;
         box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
@@ -200,13 +205,10 @@
         justify-content: center;
     }
     .sign-img{
-        height: 60vh;
+        height:auto;
         width: 100%;
         box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
         background-color: rgb(0,66,136);
-        /* background-image: url(../public/img/bg-img/002.jpg);
-        background-repeat: no-repeat;
-        background-size: cover; */
         justify-content: center;
         align-items: center;
         padding: 20px;
@@ -304,9 +306,6 @@
         width: 100%;
         box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
         background-color: rgb(0,66,136);
-        /* background-image: url(../public/img/bg-img/002.jpg);
-        background-repeat: no-repeat;
-        background-size: cover; */
         justify-content: center;
         align-items: center;
         padding: 20px;
@@ -323,13 +322,16 @@
         font-weight: bold;
     }
 
-
-
     /* ----------------------------------------------------------------
     ##################### MEDIA QUERIES OF THE SIGNUUP FORM ###########
     -------------------------------------------------------------------*/
+    @media only screen and (max-width: 834px){
+        .right-link{
+            font-size: 10px;
+        }
+    }
      @media only screen and (max-width: 576px){
-         .login-row{
+         .sign-row{
              display: block;
          }
      }
@@ -354,6 +356,12 @@
     .download-btn i{
         font-size: 20px;
     }
+    .product-meta-data .book-info{
+        margin-left: 43px;
+    }
+    .ratings-cart{
+        margin-right: 39px;
+    }
     .book-info{
         display: flex;
         background-color: rgb(185, 141, 59);
@@ -372,27 +380,6 @@
         align-items: center;
         justify-content: center;
     }
-    /* .book-info h6{
-        color: white;
-        font-size: 15px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-    }
-    .download-container{
-        margin-top: 260px;
-        background-color: none;
-        padding-left: 250px;
-    }
-    .download-container a i{
-        font-size: 30px;
-    }
- */
-
-
-
-
-
-
 
       /* -----------------------------------------------------------
     ########################## END OF DEPARTMENT ####################
@@ -400,7 +387,7 @@
 
      
      /* ---------------------------------------------------------------=
-     ##################3 SUBSCRIBE ######################################3
+     ################## START SUBSCRIBE ######################################3
      ----------------------------------------------------------------- */
      
      .newsletter-area {
@@ -423,6 +410,11 @@
         /* ---------------------------------------------------------------=
      ################## END SUBSCRIBE ######################################3
      ----------------------------------------------------------------- */
+
+
+     /* ------------------------------------------------------------
+     ########################### UPLOAD PAGES ######################
+     --------------------------------------------------------------- */
     .upload-title{
         color: white;
         text-align: center;
@@ -456,14 +448,35 @@
     .choose-name{
         color: white !important;
     }
-
-
-
-
+    /* --------------------------------------------------
+    ################## UPLOAD MEDIA QUERIES ============
+    ----------------------------------------------------- */
 
      @media only screen and (min-width: 1200px){
           .upload-sub{
               margin-left: 150px;
               width: 100%;
           }
+     }
+
+
+     /* .single-products-catagory{
+         height: 50vh !important;
+     }
+     .img{
+         background-size: contain;
+     } */
+     .products-catagories-area {
+         overflow: hidden;
+        
+     }
+     figure{
+         overflow: hidden;
+         max-height: 200px;
+
+     }
+      img.book-cover{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
      }
