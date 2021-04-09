@@ -5,16 +5,17 @@ module.exports = function (sequelize, DataType) {
       name: {
         type: DataType.STRING,
         allowNull: false,
-        validate: {
-          isAlpha: true,
-        },
+//         validate: {
+//           isAlpha: true,
+//         },
         unique: true,
       },
     },
     {
       hooks: {
-        beforeValidate: function (input) {
-          input.name = input.name.toLowerCase().trim();
+        beforeValidate: function (dept) {
+          console.log(dept.name)
+          dept.name = dept.name.toLowerCase().trim();
         },
       },
     }
