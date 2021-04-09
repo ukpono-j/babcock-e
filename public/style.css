@@ -14,32 +14,59 @@
     @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-
-
-
-
-
-
-
-
-
-    .newsletter-area .newsletter-form form input[type="submit"]{
-        background-color: rgb(185, 141, 59);
+    /* ---------------------------------------------------------
+    ########################## GENERAL STYLES ###################
+    ----------------------------------------------------------- */
+    a{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
     }
-    #scrollUp {
-        background-color: rgb(185, 141, 59);
+    a.search-nav:hover{
+        color: rgb(185, 141, 59) !important;
+        font-weight: bold;
     }
-    .newsletter-area .newsletter-text h2 span {
-        color: rgb(185, 141, 59);
+    .category-box{
+        justify-content: center;
+        align-items: center;
+        display: flex;
     }
-    .product-topbar .total-products .view a:first-child{
-        background-color: rgb(185, 141, 59);
-    }
+    .single-products-catagory a::after {
+        -webkit-transition-duration: 250ms;
+        transition-duration: 250ms;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        content: '';
+        /* background-color: rgba(60, 60, 60, 0.7); */
+        background-color: transparent !important;
+        z-index: 1;
+        opacity: 0;
+        visibility: visible;
+      }
+      .download-container-icon{
+          padding-top: 260px;
+          padding-left: 240px;
+      }
+      .download-container-icon a i{
+          font-size: 20px;
+      }
+      /* .download-container-icon1{
+        padding-top: 400px;
+        padding-left: 230px;
+      } */
+ /* ---------------------------------------------------------
+    ##################### END GENERAL STYLES ###################
+    ----------------------------------------------------------- */
+
     /* ---------------------------------------
     ################## - NAVIGATION BAR - ##########
     ------------------------------------------*/
     .main-content-wrapper .header-area .amado-nav li a{
         color: rgb(0,66,136) !important;
+        font-family: 'Roboto', sans-serif !important;
+        font-weight: bold !important;
     }
     .mobile-nav .amado-navbar-toggler span{
         background-color: rgb(185, 141, 59) !important;
@@ -81,18 +108,25 @@
     }
     .upload-field h1{
         padding-left: 20px;
+        padding-top: 14px;
+        text-transform: uppercase;
+        font-family: 'Roboto' sans-serif;
+        font-weight: bold;
+        font-size: 20px;
     }
     .upload-field a{
         margin-right: 30px;
         text-align: center;
         justify-content: center;
-        padding: 10px;
+        padding: 7px;
         font-size: 14px;
         display: flex;
-        width: 120px;
-        height: 40px;
+        width: 100px;
+        height:34px;
         border-radius: 10px;
         text-transform: uppercase;
+        font-weight: bold;
+        
         color: white;
         background-color: rgb(185, 141, 59);
     }
@@ -187,9 +221,12 @@
         border: none;
         background: #32508E;
     }
+     /* ------------------------------------------------------
+    ####################### SIGN UP  PAGE #########################
+    --------------------------------------------------------- */
    
     /* ------------------------------------------------------
-    @@@@@@@@          LOGIN PAGE
+    ####################### LOGIN PAGE #########################
     --------------------------------------------------------- */
     .login{
         height: 100vh;
@@ -207,6 +244,7 @@
         height: 60vh;
         width: 100%;
         background-color: white;
+
         box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
     }
     .links{
@@ -218,10 +256,12 @@
     }
     .login-title{
         font-size: 20px;
+        font-weight: bold;
     }
     .left{
         padding: 30px;
         padding-top: 40px;
+        font-family: 'Roboto', sans-serif;
     }
     .left input{
         width: 100%;
@@ -238,8 +278,12 @@
       color: white;
       
     }
+    .right{
+        font-family: 'Roboto', sans-serif;
+    }
     .right h3{
         text-align: center;
+        font-weight: bold;
         color: white;
         font-size: 30px;
     }
@@ -276,6 +320,7 @@
         color: white;
         border: none;
         background: #32508E;
+        font-weight: bold;
     }
 
 
@@ -298,9 +343,9 @@
             width: 100%;
         }
      }
-    /* -----------------------------------------------------------
-    ########################## END SIGN UP FORMS ####################
-     ------------------------------------------------------------*/
+   /* ------------------------------------------------------
+    ####################### LOGIN PAGE #########################
+    --------------------------------------------------------- */
 
 
       /* -----------------------------------------------------------
@@ -354,5 +399,71 @@
      ------------------------------------------------------------*/
 
      
+     /* ---------------------------------------------------------------=
+     ##################3 SUBSCRIBE ######################################3
+     ----------------------------------------------------------------- */
      
+     .newsletter-area {
+         background-color: #202C45 !important;
+     }
      
+    .newsletter-area .newsletter-form form input[type="submit"]{
+        background-color: rgb(185, 141, 59);
+    }
+    #scrollUp {
+        background-color: rgb(185, 141, 59);
+    }
+    .newsletter-area .newsletter-text h2 span {
+        color: rgb(185, 141, 59);
+    }
+    .product-topbar .total-products .view a:first-child{
+        background-color: rgb(185, 141, 59);
+    }
+
+        /* ---------------------------------------------------------------=
+     ################## END SUBSCRIBE ######################################3
+     ----------------------------------------------------------------- */
+    .upload-title{
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+    }
+     .upload{
+         height: 100vh;
+         font-family: 'Roboto', sans-serif;
+     }
+     .upload-sub{
+         background-color: rgb(0,66,136);
+         border-radius: 20px;
+         padding: 20px;
+         height: auto;
+     }
+     .form-group label{ 
+         color: white;
+     }
+     .label{
+         padding: 10px;
+     }
+
+    .upload-control{
+        padding: 0px 10px;
+        width: 220px;
+        outline: transparent;
+        border: none !important;
+    }
+    .choose-name{
+        color: white !important;
+    }
+
+
+
+
+
+     @media only screen and (min-width: 1200px){
+          .upload-sub{
+              margin-left: 150px;
+              width: 100%;
+          }
+     }
