@@ -7,7 +7,7 @@ router.use("/books", booksRoute);
 
 router.get("/", async(req, res)=>{
   const book = await Book.findAll();
-  res.render("department")
+  res.render("department", {books: book})
 })
 
 router.get("/:department/", function(req, res) {
