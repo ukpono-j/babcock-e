@@ -14,7 +14,6 @@ module.exports = function (sequelize, DataType) {
     {
       hooks: {
         beforeValidate: function (dept) {
-          console.log(dept.name)
           dept.name = dept.name.toLowerCase().trim();
         },
       },
