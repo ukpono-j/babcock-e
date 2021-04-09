@@ -1,4 +1,4 @@
-const { book: Book } = require("../models/index");
+const { Book } = require("../models/index");
 const path = require("path");
 
 module.exports.create = async (req, res) => {

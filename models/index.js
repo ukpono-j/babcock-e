@@ -31,7 +31,7 @@ fs.readdirSync(__dirname)
       sequelize,
       Sequelize.DataTypes
     );
-    db[model.name] = model;
+    db[model.name[0].toUpperCase()+model.name.substr(1)] = model;
   });
 
 Object.keys(db).forEach((modelName) => {
@@ -43,6 +43,8 @@ Object.keys(db).forEach((modelName) => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+db.Department.hasMany(db.Book)
+db.Book.belongsTo(db.Department)
 // console.log(db);
 
 module.exports = db;
