@@ -6,6 +6,15 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+        rel="stylesheet">
+    <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+
+    <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+    <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script defer src="fileUpload.js"></script>
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
@@ -19,7 +28,7 @@
 
 </head>
 
-<body class="sign-section">
+<body class="sign-section upload-page">
     <!-- Search Wrapper Area Start -->
     <div class="search-wrapper section-padding-100">
         <div class="search-close">
@@ -139,8 +148,20 @@
                             </div>
                             <hr>
                             <div class="form-group mt-3">
-                                <label class="mr-2">Upload books:</label>
-                                <input type="file" name="upload" class="choose-name">
+                                <div class="upload-row">
+                                    <div>
+                                        <label class="mr-2">Upload books:</label>
+                                        <input type="file" name="upload" class="choose-name">
+                                    </div>
+                                    <div>
+                                        <label>cover</label>
+                                        <input type="file" name="cover" class="filepond">
+                                    </div>
+                                </div>
+                                <!-- <div>
+                                    <label>Description</label>
+                                    <textarea name="description"></textarea>
+                                </div> -->
                             </div>
                             <hr>
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -179,6 +200,7 @@
                                 href="https://colorlib.com" target="_blank">Colorlib</a> & Re-distributed by <a
                                 href="https://themewagon.com/" target="_blank">Themewagon</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
                     </div>
                 </div>
                 <!-- Single Widget Area -->
