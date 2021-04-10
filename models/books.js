@@ -16,6 +16,11 @@ module.exports = function (sequelize, DataType) {
         allowNull: false,
         unique: true,
       },
+      coverName: {
+        type: DataType.STRING,
+        allowNull: false,
+        unique: true,
+      },
     },
     {
       hooks: {

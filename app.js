@@ -11,6 +11,7 @@ const goodStatus = require("good-status");
 const passport = require("./handlers/auth");
 const router = require("./routes/index");
 const db = require("./models/index");
+const homeLoad = require("./controllers/home-load");
 const PORT = process.env.PORT || 5000;
 
 const app = express();
@@ -22,9 +23,11 @@ const sessOption = {
   store: new FileStore(fileStoreOptions),
 };
 
+app.get("/", homeLoad)
+
 // view engine setup
-app.use(express.static("public"));
-// app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 // middlewares
 app.use(logger("dev"));
