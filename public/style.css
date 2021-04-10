@@ -17,6 +17,9 @@
     /* ---------------------------------------------------------
     ########################## GENERAL STYLES ###################
     ----------------------------------------------------------- */
+    /* .header-area{
+        height: auto !important;
+    } */
     a{
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
@@ -422,6 +425,15 @@
         font-size: 16px;
         font-weight: 500;
     }
+    .filepond{
+        height: 100px;
+        width: 100px;
+        font-size: 10px;
+        color: #000 !important;
+    }
+    .upload-container{
+        display: flex;
+    }
      .upload{
          height: 100vh;
          font-family: 'Roboto', sans-serif;
@@ -447,6 +459,10 @@
     }
     .choose-name{
         color: white !important;
+        width: 100%;
+    }
+    .upload-page{
+       height: auto !important;
     }
     /* --------------------------------------------------
     ################## UPLOAD MEDIA QUERIES ============
