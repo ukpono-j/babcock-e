@@ -23,7 +23,7 @@ const sessOption = {
   store: new FileStore(fileStoreOptions),
 };
 
-app.get("/", homeLoad)
+app.get("/", homeLoad("home"))
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

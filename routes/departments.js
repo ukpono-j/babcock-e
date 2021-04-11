@@ -6,7 +6,7 @@ const { Book, Department, Sequelize } = require("../models/index");
 
 router.use("/books", booksRoute);
 
-router.get("/", homeLoad);
+router.get("/", homeLoad("departments"));
 
 router.use(require("express").static(path.join(__dirname, "..", "public")));
 
