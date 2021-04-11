@@ -51,8 +51,8 @@
       .download-container-icon{
           padding-top: 360px;
           padding-left: 210px;
-          /* position: absolute;
-          bottom: 0px; */
+          position: absolute;
+         top: 0px;
 
       }
       .download-container-icon a i{
